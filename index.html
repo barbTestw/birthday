@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parabéns</title>
+</head>
+<body>
+    
+    <div id="balloon-container"></div>
+
+    <button class="btn" id="meubtn" onclick="desaparecer()">Click me!</button>
+
+    <div id="novoLayout" class="newOne" style="display: none;">
+
+        <div class="carta">
+            <div class="conteudo" id="conteudo">    
+            </div>
+            <button id="botaoAnterior" onclick="mudarInformacao(-1)">Anterior</button>
+            <button id="botaoProximo" onclick="mudarInformacao(1)">Próximo</button>
+        </div>
+        
+        <p class="txt">Desenvolvido por Bárbara Morais e com tempo de permanência em rede de 30 dias.</p>
+    </div>
+    
+      
+    <script src="js.js"></script>
+</body>
+</html>

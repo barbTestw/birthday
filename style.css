@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Indie Flower';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/indieflower/v21/m8JVjfNVeKWVnh3QMuKkFcZVaUuH.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower';
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  
+#balloon-container {
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: opacity 500ms;
+    position: absolute;
+ }
+
+  .btn{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 10px 2px 2px 1px black;
+    padding: 2rem;
+    border-radius: 50%;
+    top: 27rem;
+    cursor: pointer;                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    box-shadow: inset 1px 0 0 4px #cf9bcc;
+    color: #cf9bcc;
+    transition: color 0.25s 0.08333s;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem 'Roboto Slab', sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+  }
+  .btn::before, .btn::after {                                                                                                                                                                                                                                   
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    border-radius: 50%;
+    content: '';
+    pointer-events: none;
+    position: absolute;                                                                                                                                                                                         
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .btn::before {
+    border-radius: 50%;
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+  }
+  .btn::after {
+    border-radius: 50%;
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+  .btn:hover {
+    color: #4b204b;
+    background-color: #f0ddee;  
+  }
+  .btn:hover::before, .btn:hover::after {
+    border-color: #4b204b;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+  }
+  .btn:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+  }
+  .btn:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+  }                                                                                                                         
+  
+  .btn:focus {
+    outline: 2px dotted #55d7dc;
+  }
+  
+
+  .balloon {
+    height: 125px;
+    width: 105px;
+    border-radius: 75% 75% 70% 70%;
+    position: relative;
+  }
+  
+  .balloon:before {
+    content: "";
+    height: 75px;
+    width: 1px;
+    padding: 1px;
+    background-color: #FDFD96;
+    display: block;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .balloon:after {
+      content: "▲";
+      text-align: center;
+      display: block;
+      position: absolute;
+      color: inherit;
+      top: 120px;
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+  
+  @keyframes float {
+    from {transform: translateY(100vh);
+    opacity: 1;}
+    to {transform: translateY(-300vh);
+    opacity: 0;}
+  }
+
+.newOne{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify; 
+    min-width: 20rem;
+    max-width: 50rem;
+    font-size: 18px;
+
+}
+
+.conteudo img{
+  margin-left: 25%;
+}
+
+.carta{
+    background-color: rgb(125, 153, 214);
+    padding: 20px;
+
+}
+
+.conteudo{
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+.conteudo img{
+    width: 50%;
+    border-radius: 50%;
+}
+
+#botaoAnterior, #botaoProximo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 15px;
+  background-color: white;
+  border: 2px solid #03508f; 
+  background-color: #c9d1d8;
+  font-family: 'Indie Flower';
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.txt{
+  font-size: 13px;
+  font-weight: bold;
+}
